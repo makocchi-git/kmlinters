@@ -7,7 +7,7 @@ ENV PLUTO_VERSION 2.2.0
 WORKDIR /
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends wget git ca-certificates openssl jq \
+  && apt-get install -y --no-install-recommends wget git ca-certificates openssl jq curl \
   && apt-get -y clean \
   && rm -rf /var/lib/apt/lists/*
 
