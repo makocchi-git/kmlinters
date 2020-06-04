@@ -32,3 +32,5 @@ RUN wget https://github.com/FairwindsOps/pluto/releases/download/v${PLUTO_VERSIO
   && mv pluto /usr/local/bin/. \
   && chmod +x /usr/local/bin/pluto \
   && rm pluto_${PLUTO_VERSION}_linux_amd64.tar.gz
+
+WORKDIR /work
