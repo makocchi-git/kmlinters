@@ -1,8 +1,8 @@
 FROM debian:sid-slim
 
-ENV KUBEVAL_VERSION 0.15.0
-ENV CONFTEST_VERSION 0.18.2
-ENV PLUTO_VERSION 2.2.0
+ENV KUBEVAL_VERSION 0.16.1
+ENV CONFTEST_VERSION 0.25.0
+ENV PLUTO_VERSION 4.1.2
 
 WORKDIR /
 
@@ -12,7 +12,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # install kubeval
-RUN wget https://github.com/instrumenta/kubeval/releases/download/${KUBEVAL_VERSION}/kubeval-linux-amd64.tar.gz \
+RUN wget https://github.com/instrumenta/kubeval/releases/download/v${KUBEVAL_VERSION}/kubeval-linux-amd64.tar.gz \
   && tar zxf kubeval-linux-amd64.tar.gz kubeval \
   && mv kubeval /usr/local/bin/. \
   && chmod +x /usr/local/bin/kubeval \
